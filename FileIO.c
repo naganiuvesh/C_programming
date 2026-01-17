@@ -2,13 +2,10 @@
 int main()
 {
     FILE *fptr;
-    fptr = fopen("Newtest.txt", "r");
-    if(fptr == NULL)
-    {
-        printf("File is not exist\n");
-    }else{
-        printf("File is exist\n");
-    }
+    fptr = fopen("test.txt", "r");
+    char ch[50];
+    fscanf(fptr, "%s", ch);
+    printf("character is = %s", ch);
     fclose(fptr);
     return 0;
 }
